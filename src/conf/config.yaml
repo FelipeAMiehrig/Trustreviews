@@ -1,0 +1,33 @@
+paths:
+  in_folder_raw: ${hydra:runtime.cwd}/data/raw
+  out_folder_raw: ${hydra:runtime.cwd}/data/processed
+  in_folder_processed: ${hydra:runtime.cwd}/data/processed
+  out_folder_processed: ${hydra:runtime.cwd}/data/final
+  in_folder_reports: ${hydra:runtime.cwd}/data/final
+  out_folder_reports: ${hydra:runtime.cwd}/reports
+  in_folder_figures: ${hydra:runtime.cwd}/data/final
+  out_folder_figures: ${hydra:runtime.cwd}/reports/figures
+
+model:
+  name: "bert-base-multilingual-cased"
+
+keywords:
+  n_words: 3
+
+topics:
+  words:
+    - commercial
+    - legal
+    - product
+  enriched_text:
+   - 'commercial orders distributors channel merchandisers stores distributors wholesalers orders stock trade promotions.'
+   - 'legal responsible operations compliant laws regulations lawyers sue.'
+   - 'Product management life cycle stakeholder requirements customer needs complaints.'
+
+plots:
+  language: en
+  date:
+    month: 12
+    year: 2021
+    start_date: '12/01/2021'
+    end_date: '12/07/2021'
